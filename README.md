@@ -11,4 +11,4 @@
 
 1. Install Docker Engine from https://docs.docker.com/engine/install/
 
-2. Build an run the docker image `docker build -t id4namespace-app . && docker run -it -p 80:80 id4namespace-app`
+2. Build an run the docker image `docker build -t id4namespace-app . 
