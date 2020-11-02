@@ -9,14 +9,7 @@ export const namespaceService = {
 
 function getId(namespace) {
 
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    return fetch(baseUrl, {
-        method: 'post',
-        headers: headers,
-        body: JSON.stringify(namespace)
-    }).then(function (response) {
-        return response.json()
+    return fetch(`${baseUrl}/${namespace}/id`).then(function (response) {
+        return response.text()
     })
 }

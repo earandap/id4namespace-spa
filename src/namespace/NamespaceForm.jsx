@@ -7,10 +7,11 @@ const NamespaceForm = props => {
     const [result, setResult] = useState('');
     const [resultClass, setResultClass] = useState('');
     const onSubmit = values => {
-        namespaceService.getId(values).then((v) => {
-            setResult(v.id)
+        console.log(values)
+        namespaceService.getId(values.name).then((id) => {
+            setResult(id)
             setResultClass("alert alert-success")
-            console.log(v);
+            console.log(id);
         }).catch(() => {
             setResult("There was a problem requesting the ID")
             setResultClass("alert alert-danger")
